@@ -1,5 +1,7 @@
 ﻿using AwesomeTodoList.Domain.CommonObjects;
+using AwesomeTodoList.Domain.CommonObjects.Exceptions;
 using AwesomeTodoList.Domain.Entities;
+using AwesomeTodoList.Domain.UseCases;
 using System;
 using System.Collections.Generic;
 using System.Linq;

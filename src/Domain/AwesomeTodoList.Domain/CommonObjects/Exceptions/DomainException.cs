@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AwesomeTodoList.Domain.CommonObjects
+namespace AwesomeTodoList.Domain.CommonObjects.Exceptions
 {
     public class DomainException : Exception
     {
