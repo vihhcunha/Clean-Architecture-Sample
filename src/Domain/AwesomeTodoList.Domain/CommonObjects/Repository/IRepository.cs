@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AwesomeTodoList.Domain.CommonObjects
 {
-    public interface IRepository
+    public interface IRepository : IDisposable
     {
         IUnitOfWork UnitOfWork { get; }
     }

@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.Domain", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.IntegrationTests", "tests\AweomeTodoList.IntegrationTests\AwesomeTodoList.IntegrationTests.csproj", "{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeToDoList.Adapters", "src\Adapters\AwesomeToDoList.Adapters\AwesomeToDoList.Adapters.csproj", "{96590128-059E-464C-985B-A4868A75365A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeToDoList.Adapters", "src\Adapters\AwesomeToDoList.Adapters\AwesomeToDoList.Adapters.csproj", "{96590128-059E-464C-985B-A4868A75365A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeToDoList.Data", "src\Infrastructure\AwesomeToDoList.Data\AwesomeToDoList.Data.csproj", "{5F760C6A-8885-4368-9BF7-BBECEBB481E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{96590128-059E-464C-985B-A4868A75365A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96590128-059E-464C-985B-A4868A75365A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96590128-059E-464C-985B-A4868A75365A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F760C6A-8885-4368-9BF7-BBECEBB481E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F760C6A-8885-4368-9BF7-BBECEBB481E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F760C6A-8885-4368-9BF7-BBECEBB481E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F760C6A-8885-4368-9BF7-BBECEBB481E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{A068809A-2007-4498-82E0-7F603AF78BD9} = {A0190A0E-2849-4A16-A6FA-1ED0E306FF26}
 		{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94} = {39F01721-8523-4C62-9A44-EC03C52C9BDD}
 		{96590128-059E-464C-985B-A4868A75365A} = {2C11FF27-C2A0-4BD6-90C1-58246308F8D5}
+		{5F760C6A-8885-4368-9BF7-BBECEBB481E2} = {3D61E4F6-7ED3-4C4C-AE24-0F9CCC029735}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9070F39B-3338-4A08-855C-22F53968EFFD}
