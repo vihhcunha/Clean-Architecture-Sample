@@ -18,6 +18,8 @@ namespace AwesomeTodoList.Domain.Entities
         public bool Done { get; private set; }
         public DateTime? DateDone { get; private set; }
 
+        protected ToDo() { }
+
         public ToDo(string nameToDo, string description, DateTime? prevision = null)
         {
             Name = nameToDo;

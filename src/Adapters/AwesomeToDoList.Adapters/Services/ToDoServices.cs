@@ -15,9 +15,10 @@ namespace AwesomeToDoList.Adapters.Services
         private readonly IToDoFacade _toDoFacade;
         private readonly IMapper _mapper;
 
-        public ToDoServices(IToDoFacade toDoFacade)
+        public ToDoServices(IToDoFacade toDoFacade, IMapper mapper)
         {
             _toDoFacade = toDoFacade;
+            _mapper = mapper;
         }
 
         public async Task<ToDoViewModel> AddToDo(ToDoViewModel todoViewModel)

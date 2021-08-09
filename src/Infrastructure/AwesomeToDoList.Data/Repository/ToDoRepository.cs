@@ -40,7 +40,9 @@ namespace AwesomeToDoList.Data.Repository
 
         public async Task<List<ToDo>> GetToDoList()
         {
-            return await _context.ToDos.ToListAsync();
+            return await _context.ToDos
+                .AsNoTrackingWithIdentityResolution()
+                .ToListAsync();
         }
 
         public void Dispose()

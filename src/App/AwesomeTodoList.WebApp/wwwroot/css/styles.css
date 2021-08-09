@@ -1,0 +1,31 @@
+﻿body {
+    font-family: 'Lato', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: var(#494949) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #494949;
+}
+
+.bg-dark{
+    background-color: #1b1b1b;
+    color: #dedede;
+}
+
+.min-height-100vh {
+    min-height: 100vh;
+}
+

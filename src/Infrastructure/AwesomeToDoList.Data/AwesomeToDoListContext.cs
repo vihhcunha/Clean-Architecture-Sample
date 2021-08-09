@@ -12,6 +12,12 @@ namespace AwesomeToDoList.Data
 {
     public class AwesomeToDoListContext : DbContext, IUnitOfWork
     {
+        public AwesomeToDoListContext() { }
+
+        public AwesomeToDoListContext(DbContextOptions<AwesomeToDoListContext> options) : base(options)
+        {
+        }
+
         public DbSet<ToDo> ToDos { get; set; }
 
         public async Task Commit()
