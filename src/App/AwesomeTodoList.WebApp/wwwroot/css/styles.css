@@ -29,3 +29,18 @@
     min-height: 100vh;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .width-md-100perc{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .width-lg-100perc {
+        width: 100%;
+    }
+}

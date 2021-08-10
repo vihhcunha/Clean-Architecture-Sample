@@ -21,15 +21,12 @@ namespace AwesomeTodoList.Domain.UseCases.Commands
         public string Description { get; private set; }
         public DateTime? Prevision { get; private set; }
 
-        public List<string> ValidationMessages { get; } 
+        public List<string> ValidationMessages { get; } = new List<string>();   
 
         public bool IsValid()
         {
             if (String.IsNullOrEmpty(Name))
                 ValidationMessages.Add("Nome precisa ser preenchido!");
-
-            if (String.IsNullOrEmpty(Description))
-                ValidationMessages.Add("Descrição precisa ser preenchido!");
 
             return ValidationMessages.Count == 0;
         }

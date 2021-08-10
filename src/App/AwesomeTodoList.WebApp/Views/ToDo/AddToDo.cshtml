@@ -1,0 +1,82 @@
+﻿@model AwesomeToDoList.Adapters.ViewModels.ToDoViewModel
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="~/css/styles.css" rel="stylesheet">
+    <title> Teste </title>
+</head>
+<body>
+    <div class="bg-dark min-height-100vh">
+
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="~/img/icon.png" width="30" class="d-inline-block align-text-top">
+                    To Do List
+                </a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="pt-3">
+                <h2 class="text-center">Adicionar tarefa</h2>
+            </div>
+
+            <div class="pt-5">
+                <form method="post" asp-action="AddToDo">
+
+                    <div class="row align-items-end">
+                        <div class="col-12 col-lg-4 pt-3">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label">Nome da tarefa</label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 pt-3">
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label">Descrição</label>
+                                <input asp-for="Description" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 pt-3">
+                            <div class="form-group">
+                                <label asp-for="Prevision" class="control-label">Previsão de finalização</label>
+                                <input type="datetime-local" asp-for="Prevision" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-1 pt-4">
+                            <input type="submit" value="Salvar" class="btn btn-success width-lg-100perc" />
+                        </div>
+                    </div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                </form>
+            </div>
+
+            @if (ViewData["errors"] != null)
+            {
+                @foreach (var message in (List<string>)ViewData["errors"])
+                {
+
+                    <div class="pt-3">
+                        <div class="alert alert-danger" role="alert">
+                            @message
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+    </div>
+
+</body>
+</html>
