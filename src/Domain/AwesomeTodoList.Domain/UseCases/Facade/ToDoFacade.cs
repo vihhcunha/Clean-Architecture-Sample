@@ -21,6 +21,7 @@ namespace AwesomeTodoList.Domain.UseCases.Facade
         private readonly ICommandHandler<RenameToDoCommand, Task<ToDo>> _renameToDoCommandHandler;
         private readonly ICommandHandler<ReopenToDoCommand, Task<ToDo>> _reopenToDoCommandHandler;
         private readonly ICommandHandler<UpdateDescriptionToDoCommand, Task<ToDo>> _updateDescriptionToDoCommandHandler;
+        private readonly ICommandHandler<UpdateToDoCommand, Task<ToDo>> _updateToDoCommandHandler;
 
         public ToDoFacade(ICommandHandler<AddToDoCommand, Task<ToDo>> addToDoCommandHandler, 
             ICommandHandler<FinishToDoCommand, Task<ToDo>> finishToDoCommandHandler, 
@@ -29,6 +30,7 @@ namespace AwesomeTodoList.Domain.UseCases.Facade
             ICommandHandler<RemoveToDoCommand, Task> removeToDoCommandHandler, 
             ICommandHandler<RenameToDoCommand, Task<ToDo>> renameToDoCommandHandler, 
             ICommandHandler<ReopenToDoCommand, Task<ToDo>> reopenToDoCommandHandler, 
+            ICommandHandler<UpdateToDoCommand, Task<ToDo>> updateToDoCommandHandler, 
             ICommandHandler<UpdateDescriptionToDoCommand, Task<ToDo>> updateDescriptionToDoCommandHandler)
         {
             _addToDoCommandHandler = addToDoCommandHandler;
@@ -38,6 +40,7 @@ namespace AwesomeTodoList.Domain.UseCases.Facade
             _removeToDoCommandHandler = removeToDoCommandHandler;
             _renameToDoCommandHandler = renameToDoCommandHandler;
             _reopenToDoCommandHandler = reopenToDoCommandHandler;
+            _updateToDoCommandHandler = updateToDoCommandHandler;
             _updateDescriptionToDoCommandHandler = updateDescriptionToDoCommandHandler;
         }
 
@@ -87,6 +90,12 @@ namespace AwesomeTodoList.Domain.UseCases.Facade
         {
             var command = new GetToDoListCommand();
             return await _getListToDoCommandHandler.Handle(command);
+        }
+
+        public async Task<ToDo> UpdateToDo(Guid toDoId, string name, string description)
+        {
+            var command = new UpdateToDoCommand(toDoId, description, name);
+            return await _updateToDoCommandHandler.Handle(command);
         }
     }
 }

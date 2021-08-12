@@ -62,9 +62,9 @@
                 </form>
             </div>
 
-            @if (ViewData["errors"] != null)
+            @if (TempData["errors"] != null)
             {
-                @foreach (var message in (List<string>)ViewData["errors"])
+                @foreach (var message in (String[])TempData["errors"])
                 {
 
                     <div class="pt-3">

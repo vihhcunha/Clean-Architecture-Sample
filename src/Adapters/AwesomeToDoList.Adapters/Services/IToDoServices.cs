@@ -15,6 +15,7 @@ namespace AwesomeToDoList.Adapters.Services
         Task<ToDoViewModel> ReopenToDo(Guid toDoId);
         Task<ToDoViewModel> RenameToDo(Guid toDoId, string name);
         Task<ToDoViewModel> UpdateDescriptionToDo(Guid toDoId, string description);
+        Task<ToDoViewModel> UpdateToDo(Guid toDoId, string name, string description);
         Task RemoveToDo(Guid toDoId);
         Task<ToDoViewModel> GetToDo(Guid toDoId);
         Task<ICollection<ToDoViewModel>> GetToDoList();

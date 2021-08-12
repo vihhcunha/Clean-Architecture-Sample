@@ -75,6 +75,13 @@ namespace AwesomeToDoList.Adapters.Services
             return ToDoToToDoViewModel(toDo);
         }
 
+        public async Task<ToDoViewModel> UpdateToDo(Guid toDoId, string name, string description)
+        {
+            var toDo = await _toDoFacade.UpdateToDo(toDoId, name, description);
+
+            return ToDoToToDoViewModel(toDo);
+        }
+
         private ToDoViewModel ToDoToToDoViewModel(ToDo toDo)
         {
             return _mapper.Map<ToDoViewModel>(toDo);

@@ -20,7 +20,8 @@ namespace AwesomeTodoList.Domain.UseCases.Handler
                                       ICommandHandler<RemoveToDoCommand, Task>,
                                       ICommandHandler<RenameToDoCommand, Task<ToDo>>,
                                       ICommandHandler<ReopenToDoCommand, Task<ToDo>>,
-                                      ICommandHandler<UpdateDescriptionToDoCommand, Task<ToDo>>
+                                      ICommandHandler<UpdateDescriptionToDoCommand, Task<ToDo>>,
+                                      ICommandHandler<UpdateToDoCommand, Task<ToDo>>
     {
         private readonly IToDoRepository _repository;
         private readonly IValidationService _validationService;
@@ -131,6 +132,23 @@ namespace AwesomeTodoList.Domain.UseCases.Handler
 
             await _repository.DeleteToDo(command.Id);
             await _repository.UnitOfWork.Commit();
+        }
+
+        public async Task<ToDo> Handle(UpdateToDoCommand command)
+        {
+            if (command.IsValid() is false)
+                HandleValidationMessages(command.ValidationMessages);
+
+            var toDo = await _repository.GetToDo(command.Id);
+
+            if (toDo is null)
+                throw new DomainException("Essa tarefa não existe!");
+
+            toDo.UpdateDescription(command.Description);
+            toDo.Rename(command.Name);
+            await _repository.UnitOfWork.Commit();
+
+            return toDo;
         }
 
         private void HandleValidationMessages(List<string> validationMessages)

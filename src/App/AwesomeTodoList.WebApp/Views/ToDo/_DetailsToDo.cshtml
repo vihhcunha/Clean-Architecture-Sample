@@ -1,0 +1,43 @@
+﻿@using AwesomeToDoList.Adapters.ViewModels
+@model ToDoViewModel
+
+
+<form method="post" asp-action="UpdateToDo">
+
+	<input type="hidden" asp-for="IdToDo" class="form-control" />
+
+	<div class="row align-items-end">
+		<div class="col-12 col-lg-6 pt-3">
+			<div class="form-group">
+				<label asp-for="Name" class="control-label">Nome da tarefa</label>
+				<input asp-for="Name" class="form-control" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="col-12 col-lg-6 pt-3">
+			<div class="form-group">
+				<label asp-for="Description" class="control-label">Descrição</label>
+				<input asp-for="Description" class="form-control" />
+			</div>
+		</div>
+		<div class="col-12 col-lg-6 pt-3">
+			<div class="form-group">
+				<label asp-for="Prevision" class="control-label">Previsão de finalização</label>
+				<input type="datetime-local" asp-for="Prevision" class="form-control" readonly />
+			</div>
+		</div>
+
+		<div class="col-12 col-lg-6 pt-3">
+			<div class="form-group">
+				<label asp-for="Created" class="control-label">Criação</label>
+				<input type="datetime-local" asp-for="Created" class="form-control" readonly />
+			</div>
+		</div>
+
+		<div class="col-12 col-lg-6 pt-4">
+			<input type="submit" value="Salvar" class="btn btn-success width-lg-100perc" />
+		</div>
+	</div>
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+</form>

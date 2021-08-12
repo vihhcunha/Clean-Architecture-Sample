@@ -63,9 +63,28 @@ namespace AwesomeTodoList.WebApp.Controllers
             
         }
 
+        [HttpPost]
+        [Route("update-todo")]
+        public async Task<IActionResult> UpdateToDo(ToDoViewModel toDoViewModel)
+        {
+            try
+            {
+                if (!ModelState.IsValid) return RedirectToAction("ToDoList");
+
+                await _toDoServices.UpdateToDo(toDoViewModel.IdToDo, toDoViewModel.Name, toDoViewModel.Description);
+                return RedirectToAction("ToDoList");
+            }
+            catch (DomainException ex)
+            {
+                CarregarMensagensDeValidacao();
+                return RedirectToAction("ToDoList");
+            }
+
+        }
+
         public void CarregarMensagensDeValidacao()
         {
-            ViewData["errors"] = _validationService.MessagesValidationList;
+            TempData["errors"] = _validationService.MessagesValidationList;
         }
     }
 }

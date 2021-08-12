@@ -13,6 +13,7 @@ namespace AwesomeTodoList.Domain.UseCases.Facade
         Task<ToDo> FinishToDo(Guid toDoId);
         Task<ToDo> ReopenToDo(Guid toDoId);
         Task<ToDo> RenameToDo(Guid toDoId, string name);
+        Task<ToDo> UpdateToDo(Guid toDoId, string name, string description);
         Task<ToDo> UpdateDescriptionToDo(Guid toDoId, string description);
         Task RemoveToDo(Guid toDoId);
         Task<ToDo> GetToDo(Guid toDoId);

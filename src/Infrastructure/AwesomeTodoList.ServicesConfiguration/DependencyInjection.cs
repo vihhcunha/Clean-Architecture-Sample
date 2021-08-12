@@ -31,6 +31,7 @@ namespace AwesomeTodoList.ServicesConfiguration
             services.AddScoped<ICommandHandler<RenameToDoCommand, Task<ToDo>>, ToDoCommandHandler>();
             services.AddScoped<ICommandHandler<ReopenToDoCommand, Task<ToDo>>, ToDoCommandHandler>();
             services.AddScoped<ICommandHandler<UpdateDescriptionToDoCommand, Task<ToDo>>, ToDoCommandHandler>();
+            services.AddScoped<ICommandHandler<UpdateToDoCommand, Task<ToDo>>, ToDoCommandHandler>();
         }
 
     }
