@@ -30,8 +30,8 @@ namespace AwesomeTodoList.WebApp.Controllers
         }
 
         [HttpDelete]
-        [Route("remove-todo")]
-        public async Task<IActionResult> RemoveToDo(Guid idToDo)
+        [Route("remove-todo/{idToDo}")]
+        public async Task<IActionResult> RemoveToDo([FromRoute]Guid idToDo)
         {
             await _toDoServices.RemoveToDo(idToDo);
             return View("ToDoList", await _toDoServices.GetToDoList());
@@ -72,6 +72,31 @@ namespace AwesomeTodoList.WebApp.Controllers
                 if (!ModelState.IsValid) return RedirectToAction("ToDoList");
 
                 await _toDoServices.UpdateToDo(toDoViewModel.IdToDo, toDoViewModel.Name, toDoViewModel.Description);
+                return RedirectToAction("ToDoList");
+            }
+            catch (DomainException ex)
+            {
+                CarregarMensagensDeValidacao();
+                return RedirectToAction("ToDoList");
+            }
+
+        }
+
+        [HttpPatch]
+        [Route("update-status-todo/{idToDo}")]
+        public async Task<IActionResult> UpdateSTatusToDo([FromRoute] Guid idToDo)
+        {
+            try
+            {
+                if (!ModelState.IsValid) return RedirectToAction("ToDoList");
+
+                var toDo = await _toDoServices.GetToDo(idToDo);
+
+                if (toDo.Done)
+                    await _toDoServices.ReopenToDo(idToDo);
+                else
+                    await _toDoServices.FinishToDo(idToDo);
+
                 return RedirectToAction("ToDoList");
             }
             catch (DomainException ex)
