@@ -19,15 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.UnitTests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.Domain", "src\Domain\AwesomeTodoList.Domain\AwesomeTodoList.Domain.csproj", "{A068809A-2007-4498-82E0-7F603AF78BD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.IntegrationTests", "tests\AweomeTodoList.IntegrationTests\AwesomeTodoList.IntegrationTests.csproj", "{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeToDoList.Adapters", "src\Adapters\AwesomeToDoList.Adapters\AwesomeToDoList.Adapters.csproj", "{96590128-059E-464C-985B-A4868A75365A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeToDoList.Data", "src\Infrastructure\AwesomeToDoList.Data\AwesomeToDoList.Data.csproj", "{5F760C6A-8885-4368-9BF7-BBECEBB481E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeTodoList.WebApp", "src\App\AwesomeTodoList.WebApp\AwesomeTodoList.WebApp.csproj", "{80F94499-3709-487C-920C-16B7E72CC143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.WebApp", "src\App\AwesomeTodoList.WebApp\AwesomeTodoList.WebApp.csproj", "{80F94499-3709-487C-920C-16B7E72CC143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeTodoList.ServicesConfiguration", "src\Infrastructure\AwesomeTodoList.ServicesConfiguration\AwesomeTodoList.ServicesConfiguration.csproj", "{9B556166-A3EC-4AA2-A5C5-4D040A3984AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeTodoList.ServicesConfiguration", "src\Infrastructure\AwesomeTodoList.ServicesConfiguration\AwesomeTodoList.ServicesConfiguration.csproj", "{9B556166-A3EC-4AA2-A5C5-4D040A3984AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +41,6 @@ Global
 		{A068809A-2007-4498-82E0-7F603AF78BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A068809A-2007-4498-82E0-7F603AF78BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A068809A-2007-4498-82E0-7F603AF78BD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96590128-059E-464C-985B-A4868A75365A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96590128-059E-464C-985B-A4868A75365A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96590128-059E-464C-985B-A4868A75365A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -74,7 +68,6 @@ Global
 		{A55F974E-5707-4109-BE57-7FDB279785CE} = {ABCB7D54-51FF-4CC6-A366-9F5CB4C8E98E}
 		{B89297AE-CEFF-44FF-BAB7-84D1BEE59299} = {39F01721-8523-4C62-9A44-EC03C52C9BDD}
 		{A068809A-2007-4498-82E0-7F603AF78BD9} = {A0190A0E-2849-4A16-A6FA-1ED0E306FF26}
-		{227C2E28-52E8-4E07-ADB3-2ED0B1B1EC94} = {39F01721-8523-4C62-9A44-EC03C52C9BDD}
 		{96590128-059E-464C-985B-A4868A75365A} = {2C11FF27-C2A0-4BD6-90C1-58246308F8D5}
 		{5F760C6A-8885-4368-9BF7-BBECEBB481E2} = {3D61E4F6-7ED3-4C4C-AE24-0F9CCC029735}
 		{80F94499-3709-487C-920C-16B7E72CC143} = {A55F974E-5707-4109-BE57-7FDB279785CE}
