@@ -4,11 +4,7 @@ using AwesomeTodoList.Domain.CommonObjects.Validation;
 using AwesomeTodoList.Domain.Entities;
 using AwesomeTodoList.Domain.Repository;
 using AwesomeTodoList.Domain.UseCases.Commands;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace AwesomeTodoList.Domain.UseCases.Handler

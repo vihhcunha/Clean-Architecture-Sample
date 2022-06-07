@@ -3,11 +3,7 @@ using AwesomeTodoList.Domain.CommonObjects.Validation;
 using AwesomeToDoList.Adapters.Services;
 using AwesomeToDoList.Adapters.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AwesomeTodoList.WebApp.Controllers

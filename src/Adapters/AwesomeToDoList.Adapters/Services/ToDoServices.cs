@@ -4,8 +4,6 @@ using AwesomeTodoList.Domain.UseCases.Facade;
 using AwesomeToDoList.Adapters.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AwesomeToDoList.Adapters.Services

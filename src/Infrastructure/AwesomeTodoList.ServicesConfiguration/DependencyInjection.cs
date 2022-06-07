@@ -8,7 +8,6 @@ using AwesomeTodoList.Domain.UseCases.Handler;
 using AwesomeToDoList.Adapters.Services;
 using AwesomeToDoList.Data.Repository;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
